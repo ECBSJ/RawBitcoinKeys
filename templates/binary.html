@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.rawbitcoinkeys.com">
+    <meta name="twitter:title" content="DIY raw bitcoin keys">
+    <meta name="twitter:description" content="Create your own raw bitcoin keys using binary digits.">
+    <meta name="twitter:image" content="https://i.imgur.com/BKAFPXh.png">
+    <meta property="og:image" name="image" content="https://i.imgur.com/BKAFPXh.png">
+    <meta property="og:description" content="Create your own raw bitcoin keys by going step by step through the process of starting from binary digits, going through the ECDSA, and a couple of one-way hashing iterations to end up with your own public bitcoin address.">
+    <meta property="og:url"content="https://www.rawbitcoinkeys.com">
+    <meta name="title" property="og:title" content="DIY raw bitcoin keys">
+    <title>DIY bitcoin keys</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="..\static\binary_design.css">
+    <script defer src="..\static\script.js"></script>
+</head>
+<body>
+
+    <div class="content">
+        <h1>./Input 256 random binary digits</h1>
+        <form id="form" name="passdata" action="#" method="post">
+            <input id="input-field" class="form-control" type="number" name="binary" autocomplete="off" placeholder="type here" required>
+            <p>Total binary digits entered (1's and 0's only): <b id="character-count">0</b></p>
+            <input type="submit" class="submit" value="next">
+        </form>
+        <div id="error" class="errormessage"></div>
+    </div>
+
+<script src="..\static\app.js"></script>
+
+</body>
+
+</html>

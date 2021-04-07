@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY bitcoin keys</title>
+    <link rel="stylesheet" href="..\static\finalpubadd_design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+</head>
+<body>
+
+    <div class="content">
+        <h2 class="firsttitle">./Your compressed public keys will go through an intense iterative hashing journey leveraging RIPEMD and SHA256.</h2>
+        <img src="..\static\hash_process.png" alt="">
+
+        <!-- <form name="passdata" action="#" method="post">
+            <input id="input-field" type="text" name="pubkey" class="form-control" autocomplete="off" placeholder="Enter the compressed form of your public keys here" required>
+            <br>
+            <input type="submit" class="submit" value="Convert to public address">
+        </form> -->
+
+        <h2>Your compressed public keys have now been converted into your official personal public bitcoin address. 
+            It is now ready to receive monetary freedom:
+        </h2>
+
+        <div class="output-box">
+            <h1 id="keysoutput" class="keysoutput">{{finalpubadd}}</h1>
+
+            <div class="copyfunction">
+                <input type="image" class="copyButton" id="copyButton1" src="..\static\copy.png">
+                <span class="alert">Copied!</span>
+                <script>
+                    function copy(copyId){
+                        var $inp=$("<input>");
+                        $("body").append($inp);
+                        $inp.val($(""+copyId).text()).select();
+                        document.execCommand("copy");
+                        $inp.remove();
+                        $(".alert").fadeIn(500,function(){
+                            $(".alert").fadeOut()
+                        });
+                    }
+
+                    $(document).ready(function(){
+                        $("#copyButton1").click(
+                            function(){
+                                copy('#keysoutput');
+                            }
+                        )
+                    })
+                </script>
+            </div>
+
+        </div>
+
+        <a href="/" class="next">Create another set of keys</a>
+
+        <div class="footnotes">
+            <p>1\ Be sure to copy and save this public address in a secure and safe place where 
+                it could be easily accesible. This address is used to show a sender and receive bitcoins when 
+                you and the sender have agreed on a transaction. 
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

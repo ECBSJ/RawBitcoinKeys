@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY bitcoin keys</title>
+    <link rel="stylesheet" href="..\static\elliptic_design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">  
+</head>
+<body>
+
+    <div class="content">
+        <div class="description">
+            <h2>./This is where we learn about the elliptic curve magic</h2>
+            <p>Bitcoin uses a specific elliptic curve and set of mathematical constants, as defined in a standard 
+                called secp256k1, established by the National Institute of Standards and Technology (NIST).
+            </p>
+            <p>The public key is calculated from the private key using elliptic curve multiplication, which is irreversible: 
+                K = k*G, where k is the private key, G is the constant point called the generator point and K is the resulting 
+                public key. 
+            </p>
+        </div>
+
+        <form name="passdata" action="#" method="post">
+            <input id="input-field" type="number" class="form-control" name="decimalform" autocomplete="off" placeholder="Re-enter the decimal form to convert it to its public keys" required>
+            <br>
+            <input type="submit" class="submit" value="Convert to public keys">
+        </form>
+
+        <div class="footnotes">
+            <p>1\ Be sure to copy and save this decimal form of your private keys on a seperate file (perferably offline).
+                It is imperative that you keep this in a safe and secure place. Without these private keys you will not be able to
+                access your bitcoins in the future. </p>
+            <p>2\ The constants for the generator point are as below:</p>
+            <p>GPoint = (Gx,Gy) <br>
+                Gx = 55066263022277343669578718895168534326250603453777594175500187360389116729240 <br>
+                Gy = 32670510020758816978083085130507043184471273380659243275938904335757337482424
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>

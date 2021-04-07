@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY bitcoin keys</title>
+    <link rel="stylesheet" href="..\static\decimal_design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+</head>
+<body>
+
+    <div class="content">
+
+        <h2>./This is the decimal form of your private keys which is represented as a dot on
+            bitcoin's elliptic cryptography finite curve, called secp256k1, by 
+            the formula of y^2 = x^3 +7</h2>
+
+        <div class="output-box">
+            <div class="keysoutput">
+                <h1 id="decimalkeys" class="decimalkeys">{{dec}}</h1>
+            </div>
+
+            <div class="copyfunction">
+                <input type="image" class="copyButton" id="copyButton1" src="..\static\copy.png">
+                <span class="alert">Copied!</span>
+                <script>
+                    function copy(copyId){
+                        var $inp=$("<input>");
+                        $("body").append($inp);
+                        $inp.val($(""+copyId).text()).select();
+                        document.execCommand("copy");
+                        $inp.remove();
+                        $(".alert").fadeIn(500,function(){
+                            $(".alert").fadeOut()
+                        });
+                    }
+
+                    $(document).ready(function(){
+                        $("#copyButton1").click(
+                            function(){
+                                copy('#decimalkeys');
+                            }
+                        )
+                    })
+                </script>
+            </div>
+        </div>
+
+        <a href="elliptic.html" class="next">Let's go elliptic</a>
+
+        <div class="footnotes">
+            <p>1\ Be sure to copy this decimal form of your private keys to the clipboard and also on a seperate file (perferably offline).
+                It is imperative that you keep this in a safe and secure place. Without these private keys you will not be able to
+                access your bitcoins in the future. This site does not store any private keys, public keys, nor public addresses.
+            </p>
+            <p>
+                2\ Private keys can be represented in multiple forms. The decimal format can be transformed into a 
+                hexadecimal format, BIP38 format, or even a WIF format. The WIF format is the suggested way to keep your
+                private keys as most wallet softwares accept this format when importing your UTXOs.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

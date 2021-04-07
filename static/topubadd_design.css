@@ -1,0 +1,63 @@
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 0;
+    color: white;
+    background: linear-gradient(rgba(0,0,50,0.7),rgba(0,0,50,0.7)),url(wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    max-width: 650px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+img {
+    text-align: center;
+}
+
+form {
+    margin-top: 50px;
+}
+
+.form-control {
+    width: 500px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid darkblue;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form .submit {
+    font-family: 'Chakra Petch', sans-serif;
+    background: transparent;
+    border-color: white;
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    height: 30px;
+    transition-property: color, background-color;
+    transition-duration: 2s;
+}
+
+form .submit:hover {
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}

@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY bitcoin keys</title>
+    <link rel="stylesheet" href="..\static\topubadd_design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">  
+</head>
+<body>
+
+    <div class="content">
+        <h2>./Your compressed public keys will go through an intense iterative hashing journey leveraging RIPEMD and SHA256.</h2>
+        <img src="..\static\hash_process.png" alt="">
+
+        <form name="passdata" action="#" method="post">
+            <input id="input-field" type="text" name="pubkey" class="form-control" autocomplete="off" placeholder="Enter the compressed form of your public keys here" required>
+            <br>
+            <input type="submit" class="submit" value="Convert to public address">
+        </form>
+    </div>
+
+</body>
+</html>

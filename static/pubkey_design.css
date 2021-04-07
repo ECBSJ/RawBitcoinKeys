@@ -1,0 +1,83 @@
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 0;
+    color: white;
+    background: linear-gradient(rgba(0,0,50,0.7),rgba(0,0,50,0.7)),url(wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.publickeys {
+    font-size: medium;
+}
+
+.output-box {
+    max-width: 800px;
+    display: flex;
+}
+
+.keysoutput {
+    flex: 1;
+}
+
+.copyfunction {
+    margin-left: 10px;
+    flex: 2;
+    padding-top: 7px;
+}
+
+h3 {
+    color: powderblue;
+    font-style: italic;
+}
+
+.alert {
+    margin: auto;
+    color: white;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.next {
+    background: transparent;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 3px 3px;
+    color: white;
+    font-size: 15px;
+    margin-top: 50px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    height: 40px;
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.next:hover {
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}
+
+.footnotes {
+    margin-top: 50px;
+    color: slategray;
+    font-family: 'Pathway Gothic One', sans-serif;
+}

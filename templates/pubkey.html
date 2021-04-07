@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY bitcoin keys</title>
+    <link rel="stylesheet" href="..\static\pubkey_design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+</head>
+<body>
+
+    <div class="content">
+
+        <h2>./These are your public keys denoted as an x and y coordinates of the secp256k1 curve.</h2>
+        <h1 class="publickeys">{{pubk}}</h1>
+        <h3>This is then reformatted into a compressed hexadecimal form below:</h3>
+
+        <div class="output-box">
+            <h1 id="keysoutput" class="publickeys keysoutput">{{comppk}}</h1>
+
+            <div class="copyfunction">
+                <input type="image" class="copyButton" id="copyButton1" src="..\static\copy.png">
+                <span class="alert">Copied!</span>
+                <script>
+                    function copy(copyId){
+                        var $inp=$("<input>");
+                        $("body").append($inp);
+                        $inp.val($(""+copyId).text()).select();
+                        document.execCommand("copy");
+                        $inp.remove();
+                        $(".alert").fadeIn(500,function(){
+                            $(".alert").fadeOut()
+                        });
+                    }
+
+                    $(document).ready(function(){
+                        $("#copyButton1").click(
+                            function(){
+                                copy('#keysoutput');
+                            }
+                        )
+                    })
+                </script>
+            </div>
+        </div>
+
+        <a href="topubadd.html" class="next" >Let's hash it up</a>
+        
+        <div class="footnotes">
+            <p>1\ Be sure to copy this compressed hexadecimal form of your public keys to the clipboard. You will 
+                be needing to run it through bitcoin's hashing algorithms on the next part. Although it is 
+                more important to keep a copy of the private keys, you can also keep a copy of the public keys 
+                on a seperate file (preferaly offline).
+            </p>
+            <p>
+                2\ Elliptic cryptography curve utilizes a python script taken from James D'Angelo. The following 
+                scripts used to convert the compressed public keys to a public address was pulled from https://gist.github.com/circulosmeos. 
+                Some of the wording in this site was taken directly from Mastering Bitcoin: Unlocking Digital Cryptocurrencies 1st Edition 2014, by Andreas M. Antonopoulos.
+            </p>
+            <p>
+                3\ For an elaborate read on this process, feel free to check out this article: https://medium.com/tuoyuanresearch/getting-back-to-basics-an-oldie-but-goodie-e8169fecce01
+            </p>
+        </div>
+    </div>
+</body>
+</html>
