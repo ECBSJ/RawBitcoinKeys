@@ -1,6 +1,6 @@
 # RawBitcoinKeys
 
-https://www.rawbitcoinkeys.com/
+https://raw-keys.herokuapp.com/
 
 I created this non-mnemonic key generator through Flask that shows you the step-by-step process through the ECDSA and hashing algos leading you from the initial private key creation to your public address.
 
